@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import "./Ticket.scss";
 
 type TeamMember = {
@@ -12,24 +13,41 @@ type TicketProps = {
 };
 
 const Ticket = ({ info }: TicketProps) => {
-  //
-  //
-  const [counter, setCounter] = useState<number>(0);
-  //
-  //
-  const handleIncrement = () => {
-    setCounter((prevCounter) => prevCounter + 1);
+  const [counters, setCounters] = useState<number[]>(
+    new Array(info.length).fill(0)
+  );
+
+  const handleIncrement = (index: number) => {
+    setCounters((prevCounters) => {
+      const newCounters = [...prevCounters];
+      newCounters[index] += 1;
+      return newCounters;
+    });
+  };
+
+  const handleDecrement = (index: number) => {
+    setCounters((prevCounters) => {
+      const newCounters = [...prevCounters];
+
+      if (newCounters[index] > 0) {
+        newCounters[index] -= 1;
+      }
+      return newCounters;
+    });
   };
 
   return (
     <div className="ticket-container__created">
-      {info.map((worker) => (
+      {info.map((worker, index) => (
         <div className="ticket-tile" key={worker.id}>
           <p>Name: {worker.name}</p>
           <p>Role: {worker.role}</p>
           <div>
-            <p>Counter: {counter}</p>
-            <button onClick={handleIncrement}>Increment Counter</button>
+            <p>
+              Counter: <br></br> {counters[index]}
+            </p>
+            <button onClick={() => handleDecrement(index)}>-</button>
+            <button onClick={() => handleIncrement(index)}>+</button>
           </div>
         </div>
       ))}
