@@ -1,0 +1,10 @@
+.ticket-tile {
+  height: 400px;
+  width: 300px;
+  border: 2px solid black;
+}
+.ticket-tile p {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px;
+}/*# sourceMappingURL=Ticket.css.map */
