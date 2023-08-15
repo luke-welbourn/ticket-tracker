@@ -1,1 +1,1 @@
-{"version":3,"sources":["Ticket.scss","Ticket.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,YAAA;EACA,uBAAA;ACCF;ADAE;EACE,cAAA;EACA,iBAAA;EACA,aAAA;ACEJ","file":"Ticket.css"}
+{"version":3,"sources":["Ticket.scss","Ticket.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,YAAA;EACA,uBAAA;ACCF;ADAE;EACE,gBAAA;EACA,iBAAA;EACA,aAAA;ACEJ;;ADEA;EACE,YAAA;EACA,YAAA;EACA,WAAA;EACA,aAAA;EACA,kCAAA;EACA,mCAAA;ACCF","file":"Ticket.css"}

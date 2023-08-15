@@ -1,25 +1,28 @@
 import { useState } from "react";
-
-import { teamMember, team } from "../../data/team";
-
 import "./Ticket.scss";
 
-type ticketType = {
+type TeamMember = {
   id: number;
   name: string;
   role: string;
 };
 
-const Ticket = ({ id, name, role }: ticketType) => {
-  //
-  //
+type TicketProps = {
+  info: TeamMember[];
+};
+
+const Ticket = ({ info }: TicketProps) => {
   return (
-    <div className="ticket-tile" key={id}>
-      <p>Name: {name}</p>
-      <p>Role: {role}</p>
-      <div>
-        <p>Counter:</p>
-      </div>
+    <div className="ticket-container__created">
+      {info.map((worker) => (
+        <div className="ticket-tile" key={worker.id}>
+          <p>Name: {worker.name}</p>
+          <p>Role: {worker.role}</p>
+          <div>
+            <p>Counter:</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

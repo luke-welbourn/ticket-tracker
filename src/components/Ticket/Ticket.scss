@@ -1,10 +1,19 @@
 .ticket-tile {
-  height: 400px;
-  width: 300px;
+  height: 100px;
+  width: 150px;
   border: 2px solid black;
   p {
-    font-size: 1em;
+    font-size: 0.5em;
     font-weight: bold;
     padding: 10px;
   }
+}
+
+.ticket-container__created {
+  margin: 20px;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }

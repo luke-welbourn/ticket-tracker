@@ -1,10 +1,10 @@
-export type teamMember = {
-  id: number;
-  name: string;
-  role: string;
-};
+// export type teamMember = {
+//   id: number;
+//   name: string;
+//   role: string;
+// };
 
-export const team: teamMember[] = [
+export const team = [
   {
     id: 1,
     name: "Alima Miller",
