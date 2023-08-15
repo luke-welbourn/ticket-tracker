@@ -1,12 +1,16 @@
 .ticket-tile {
-  height: 130px;
-  width: 150px;
+  height: 17vh;
+  width: 25vw;
   border: 2px solid black;
   border-radius: 3px;
+  background-color: rgb(155, 189, 216);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   p {
-    font-size: 0.5em;
+    font-size: 0.55em;
     font-weight: bold;
-    padding: 10px;
+    padding: 7px;
   }
 }
 
@@ -21,7 +25,7 @@
 
   .ticket-tile__counterContainer {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 
   .ticket-tile__buttonContainer {
@@ -29,7 +33,16 @@
     justify-content: space-around;
 
     button {
-      width: 35px;
+      width: 30%;
+      background-color: rgb(79, 144, 187);
+      border: 1px solid black;
+      margin-bottom: 5px;
     }
+  }
+
+  .ticket-tile__counter {
+    font-size: 2.5em;
+    text-align: center;
+    padding-bottom: 15px;
   }
 }

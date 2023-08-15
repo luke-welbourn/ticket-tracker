@@ -36,6 +36,8 @@ const Ticket = ({ info }: TicketProps) => {
     });
   };
 
+  const total = counters.reduce((sum, currentValue) => sum + currentValue, 0);
+
   return (
     <div className="ticket-container__created">
       {info.map((worker, index) => (
@@ -53,6 +55,12 @@ const Ticket = ({ info }: TicketProps) => {
           </div>
         </div>
       ))}
+      <div className="ticket-tile ticket-tile__counter">
+        <p>Total Tickets:</p>
+        <div className="ticket-tile__counterContainer">
+          <p>{total}</p>
+        </div>
+      </div>
     </div>
   );
 };
