@@ -41,7 +41,16 @@ const Ticket = ({ info }: TicketProps) => {
   return (
     <div className="ticket-container__created">
       {info.map((worker, index) => (
-        <div className="ticket-tile" key={worker.id}>
+        <div
+          className={`ticket-tile ${
+            counters[index] <= 1
+              ? "ticket-tile--low"
+              : counters[index] <= 5
+              ? "ticket-tile--medium"
+              : "ticket-tile--high"
+          }`}
+          key={worker.id}
+        >
           <p>Name: {worker.name}</p>
           <p>Role: {worker.role}</p>
           <div className="ticket-tile__counterContainer">
