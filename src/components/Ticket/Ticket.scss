@@ -18,4 +18,18 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
+
+  .ticket-tile__counterContainer {
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  .ticket-tile__buttonContainer {
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      width: 35px;
+    }
+  }
 }

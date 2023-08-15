@@ -42,12 +42,14 @@ const Ticket = ({ info }: TicketProps) => {
         <div className="ticket-tile" key={worker.id}>
           <p>Name: {worker.name}</p>
           <p>Role: {worker.role}</p>
-          <div>
+          <div className="ticket-tile__counterContainer">
             <p>
               Counter: <br></br> {counters[index]}
             </p>
-            <button onClick={() => handleDecrement(index)}>-</button>
-            <button onClick={() => handleIncrement(index)}>+</button>
+            <div className="ticket-tile__buttonContainer">
+              <button onClick={() => handleDecrement(index)}>-</button>
+              <button onClick={() => handleIncrement(index)}>+</button>
+            </div>
           </div>
         </div>
       ))}
