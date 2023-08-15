@@ -1,9 +1,3 @@
-// export type teamMember = {
-//   id: number;
-//   name: string;
-//   role: string;
-// };
-
 export const team = [
   {
     id: 1,
