@@ -22,6 +22,7 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
+  gap: 15px;
 
   .ticket-tile__counterContainer {
     text-align: center;
@@ -57,4 +58,15 @@
 
 .ticket-tile--high {
   background-color: rgb(90, 211, 90);
+}
+
+.search-box__created {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  height: 70px;
+
+  .user-input {
+    width: 200px;
+  }
 }
