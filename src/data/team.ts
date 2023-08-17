@@ -19,7 +19,7 @@ export const team = [
       experience: "1 year",
       department: "Engineering",
       techstack: ["Python", "Django", "HTML/CSS"],
-      profilePicture: "https://via.placeholder.com/250",
+      profilePicture: "https://placebear.com/250/250",
     },
   },
   {
@@ -54,7 +54,7 @@ export const team = [
       experience: "2 years",
       department: "Engineering",
       techstack: ["Ruby", "Ruby on Rails", "PostgreSQL"],
-      profilePicture: "https://www.fillmurray.com/250/250",
+      profilePicture: "https://placebear.com/250/250",
     },
   },
   {
@@ -87,7 +87,7 @@ export const team = [
       experience: "2 years",
       department: "Quality Assurance",
       techstack: ["Testing Frameworks", "Bug Tracking Tools"],
-      profilePicture: "https://www.placecage.com/250/250",
+      profilePicture: "https://placebear.com/250/250",
     },
   },
   {

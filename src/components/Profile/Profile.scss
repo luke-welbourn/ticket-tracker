@@ -1,6 +1,6 @@
 .profile-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
 }
@@ -18,20 +18,6 @@
 .profile-picture {
   max-width: 100%;
   height: auto;
+  width: 100%;
   border-radius: 50%;
-}
-
-.profile-name {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.profile-role {
-  font-size: 14px;
-  color: #666;
-}
-
-.profile-details {
-  font-size: 14px;
-  color: #888;
 }
