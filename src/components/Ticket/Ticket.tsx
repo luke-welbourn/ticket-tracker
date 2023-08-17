@@ -3,10 +3,18 @@ import SearchBox from "../SearchBox/SearchBox";
 
 import "./Ticket.scss";
 
+type Profile = {
+  experience: string;
+  department: string;
+  techstack: string[];
+  profilePicture: string;
+};
+
 type TeamMember = {
   id: number;
   name: string;
   role: string;
+  profile: Profile;
 };
 
 type TicketProps = {
@@ -63,42 +71,51 @@ const Ticket = ({ info }: TicketProps) => {
   const total = counters.reduce((sum, currentValue) => sum + currentValue, 0);
 
   return (
-    <div>
-      <div className="search-box__created">
-        <SearchBox searchTerm={searchTerm} handleInput={handleInput} />
-      </div>
-      <div className="ticket-container__created">
-        {filteredWorkersBySearchTerm.map((worker, index) => (
-          <div
-            className={`ticket-tile ${
-              counters[index] <= 1
-                ? "ticket-tile--low"
-                : counters[index] <= 5
-                ? "ticket-tile--medium"
-                : "ticket-tile--high"
-            }`}
-            key={worker.id}
-          >
-            <p>Name: {worker.name}</p>
-            <p>Role: {worker.role}</p>
-            <div className="ticket-tile__counterContainer">
-              <p>
-                Counter: <br></br> {counters[index]}
-              </p>
-              <div className="ticket-tile__buttonContainer">
-                <button onClick={() => handleDecrement(index)}>-</button>
-                <button onClick={() => handleIncrement(index)}>+</button>
+    <div className="refactor-ticket">
+      <header>
+        <h1>📊 Ticket Tracker 📊</h1>
+      </header>
+      <main>
+        <section className="ticket-container">
+          <div>
+            <div className="search-box__created">
+              <SearchBox searchTerm={searchTerm} handleInput={handleInput} />
+            </div>
+            <div className="ticket-container__created">
+              {filteredWorkersBySearchTerm.map((worker, index) => (
+                <div
+                  className={`ticket-tile ${
+                    counters[index] <= 1
+                      ? "ticket-tile--low"
+                      : counters[index] <= 5
+                      ? "ticket-tile--medium"
+                      : "ticket-tile--high"
+                  }`}
+                  key={worker.id}
+                >
+                  <p>Name: {worker.name}</p>
+                  <p>Role: {worker.role}</p>
+                  <div className="ticket-tile__counterContainer">
+                    <p>
+                      Counter: <br></br> {counters[index]}
+                    </p>
+                    <div className="ticket-tile__buttonContainer">
+                      <button onClick={() => handleDecrement(index)}>-</button>
+                      <button onClick={() => handleIncrement(index)}>+</button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              <div className="ticket-tile ticket-tile__counter">
+                <p>Total Tickets:</p>
+                <div className="ticket-tile__counterContainer">
+                  <p>{total}</p>
+                </div>
               </div>
             </div>
           </div>
-        ))}
-        <div className="ticket-tile ticket-tile__counter">
-          <p>Total Tickets:</p>
-          <div className="ticket-tile__counterContainer">
-            <p>{total}</p>
-          </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 };
