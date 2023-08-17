@@ -1,5 +1,3 @@
-import team from "../../data/team";
-
 import "./Profile.scss";
 
 type Profile = {
