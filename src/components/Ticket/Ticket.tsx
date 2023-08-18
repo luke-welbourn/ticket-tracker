@@ -1,5 +1,6 @@
 import { useState, FormEvent } from "react";
 import SearchBox from "../SearchBox/SearchBox";
+import { Link } from "react-router-dom";
 
 import "./Ticket.scss";
 
@@ -93,7 +94,15 @@ const Ticket = ({ info }: TicketProps) => {
                   }`}
                   key={worker.id}
                 >
-                  <p>Name: {worker.name}</p>
+                  <Link
+                    to={`/ticket-tracker/profiles/${worker.id}`}
+                    key={worker.id}
+                  >
+                    <p>
+                      Name:
+                      {worker.name}
+                    </p>
+                  </Link>
                   <p>Role: {worker.role}</p>
                   <div className="ticket-tile__counterContainer">
                     <p>
