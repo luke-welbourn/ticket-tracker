@@ -1,4 +1,5 @@
 import "./Home.scss";
+import { Link } from "react-router-dom";
 
 type Profile = {
   experience: string;
@@ -30,10 +31,12 @@ const Home = ({ info }: HomeProps) => {
       <div className="name-only__container">
         {info.map((worker) => (
           <div key={worker.id} className="name-only__card">
-            <p>
-              Name: <br></br>
-              {worker.name}
-            </p>
+            <Link to={`/ticket-tracker/profiles/${worker.id}`} key={worker.id}>
+              <p>
+                Name: <br></br>
+                {worker.name}
+              </p>
+            </Link>
           </div>
         ))}
       </div>
