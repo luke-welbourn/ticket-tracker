@@ -95,6 +95,7 @@ const Ticket = ({ info }: TicketProps) => {
                   key={worker.id}
                 >
                   <Link
+                    className="linked"
                     to={`/ticket-tracker/profiles/${worker.id}`}
                     key={worker.id}
                   >

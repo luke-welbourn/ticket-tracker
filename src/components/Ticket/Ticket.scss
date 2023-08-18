@@ -49,7 +49,7 @@
 }
 
 .ticket-tile--low {
-  background-color: rgb(223, 156, 156);
+  background-color: rgb(224, 165, 165);
 }
 
 .ticket-tile--medium {
@@ -68,5 +68,18 @@
 
   .user-input {
     width: 200px;
+  }
+}
+
+.linked {
+  text-decoration: none;
+  color: black;
+
+  .linked:hover {
+    color: black;
+  }
+
+  .linked:visited {
+    color: black;
   }
 }

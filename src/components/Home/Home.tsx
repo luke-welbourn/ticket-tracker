@@ -31,7 +31,11 @@ const Home = ({ info }: HomeProps) => {
       <div className="name-only__container">
         {info.map((worker) => (
           <div key={worker.id} className="name-only__card">
-            <Link to={`/ticket-tracker/profiles/${worker.id}`} key={worker.id}>
+            <Link
+              className="linked"
+              to={`/ticket-tracker/profiles/${worker.id}`}
+              key={worker.id}
+            >
               <p>
                 Name: <br></br>
                 {worker.name}

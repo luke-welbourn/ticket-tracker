@@ -42,3 +42,16 @@ h1 {
     font-weight: bold;
   }
 }
+
+.linked {
+  text-decoration: none;
+  color: black;
+
+  .linked:hover {
+    color: black;
+  }
+
+  .linked:visited {
+    color: black;
+  }
+}
